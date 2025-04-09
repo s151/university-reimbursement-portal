@@ -1,0 +1,26 @@
+<div class="dashboard-container">
+    <h3 class="text-center mb-4">Admin Dashboard</h3>
+  
+    <div class="row g-4 justify-content-center">
+      <!-- Members Card -->
+      <div class="col-md-4 col-sm-6">
+        <div class="dashboard-card card-members" routerLink="/members" role="button">
+          <div class="card-body text-center">
+            <h5 class="card-title">Members</h5>
+            <h2 class="card-count">{{ members }}</h2>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Reimbursements Card -->
+      <div class="col-md-4 col-sm-6">
+        <div class="dashboard-card card-claims" routerLink="/claims" role="button">
+          <div class="card-body text-center">
+            <h5 class="card-title">Reimbursements</h5>
+            <h2 class="card-count">{{ claims }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,92 @@
+<h5>Details of Reimbursement No {{claim.id}}</h5>
+
+<table class="table table-sm">
+  <tr>
+    <th>Employee Name</th>
+    <td>{{claim.member.mname}}</td>
+    <th>Address</th>
+    <td>{{claim.member.address}}</td>
+  </tr>
+  <tr>
+    <th>Phone</th>
+    <td>{{claim.member.phone}}</td>
+    <th>Email</th>
+    <td>{{claim.member.email}}</td>
+  </tr>
+  <tr>
+    <th>Employee Type</th>
+    <td>{{claim.vtype}}</td>
+    <th>Purchase Description</th>
+    <td>{{claim.vno}}</td>
+  </tr>
+  <tr>
+    <th>Date of Purchase</th>
+    <td>{{claim.model}}</td>
+    <th>Request Submitted On</th>
+    <td>{{claim.reqDate | date}}</td>
+  </tr>
+  <tr>
+    <th>Reimbursement Amount</th>
+    <td>{{claim.insuranceAmount | currency}}</td>
+    <th>Total Claimed Amount</th>
+    <td>{{claim.claimAmount | currency}}</td>
+  </tr>
+  <tr>
+    <th>Status</th>
+    <td>{{claim.status}}</td>
+  </tr>
+
+  <tr>
+    <td colspan="4">
+      <h5>Uploaded Supporting Documents</h5>
+      <ol>
+        <li *ngFor="let item of claim.documents" class="mb-2">
+          <span class="d-inline-block" style="width:200px">{{item.doctype}}</span>
+          <a target="_blank" href="http://localhost:5255/{{item.docfile}}" download class="btn btn-success btn-sm">Download</a>
+        </li>
+      </ol>
+    </td>
+  </tr>
+
+  <tr *ngIf="claim.status === 'Approved'">
+    <th>Processed On</th>
+    <td>{{claim.processDate | date}}</td>
+    <th>Approved Reimbursement Amount</th>
+    <td>{{claim.finalAmount | currency}}</td>
+  </tr>
+
+  <tr *ngIf="claim.status === 'Rejected'">
+    <th>Processed On</th>
+    <td>{{claim.processDate | date}}</td>
+    <th>Rejection Reason</th>
+    <td>{{claim.rejReason}}</td>
+  </tr>
+</table>
+
+<!-- Admin actions -->
+<div class="card" *ngIf="user.role === 'Admin' && claim.status === 'Pending'">
+  <div class="card-body">
+    <h5>Reimbursement Processing</h5>
+    <div class="row">
+      <div class="col-sm-8">
+        <form [formGroup]="rejectForm" (submit)="submitReject()">
+          <div class="form-group">
+            <label>Rejection Reason</label>
+            <input type="text" name="rejReason" formControlName="rejReason" required class="form-control">
+          </div>
+          <button class="btn btn-danger">Reject Reimbursement</button>
+        </form>
+      </div>
+
+      <div class="col-sm-4">
+        <form [formGroup]="approveForm" (submit)="submitApprove()">
+          <div class="form-group">
+            <label>Approved Reimbursement Amount</label>
+            <input type="number" name="finalAmount" min="1" formControlName="finalAmount" required class="form-control">
+          </div>
+          <button class="btn btn-success float-right">Approve Reimbursement</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

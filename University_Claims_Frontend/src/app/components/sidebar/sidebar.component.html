@@ -1,0 +1,63 @@
+<aside class="custom-sidebar">
+    <!-- Brand Logo -->
+    <div class="sidebar-header">
+      <img src="assets/images/NoImage.jpg" alt="User" class="avatar">
+      <h6>{{ uname }}</h6>
+    </div>
+  
+    <!-- Menu -->
+    <nav class="sidebar-nav">
+      <ul class="nav flex-column">
+  
+        <!-- USER MENU -->
+        <ng-container *ngIf="!isadmin">
+          <li class="nav-item">
+            <a routerLink="profile" class="nav-link">
+              <i class="fas fa-user-circle me-2"></i>
+              Profile
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a routerLink="add-claim" class="nav-link">
+              <i class="fas fa-plus-circle me-2"></i>
+              New Reimbursement
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a routerLink="claims" class="nav-link">
+              <i class="fas fa-folder-open me-2"></i>
+              Reimbursement
+            </a>
+          </li>
+        </ng-container>
+  
+        <!-- ADMIN MENU -->
+        <ng-container *ngIf="isadmin">
+          <li class="nav-item">
+            <a routerLink="dashboard" class="nav-link">
+              <i class="fas fa-chart-line me-2"></i>
+              Dashboard
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a routerLink="members" class="nav-link">
+              <i class="fas fa-users me-2"></i>
+              Members
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a routerLink="claims" class="nav-link">
+              <i class="fas fa-folder-open me-2"></i>
+              Reimbursement
+            </a>
+          </li>
+        </ng-container>
+  
+      </ul>
+    </nav>
+  </aside>
+  

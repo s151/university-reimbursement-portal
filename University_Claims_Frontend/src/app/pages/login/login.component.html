@@ -1,0 +1,31 @@
+<div class="login-page-container">
+    <div class="background-overlay"></div>
+  
+    <div class="login-box shadow-lg">
+      <div class="text-center mb-4">
+        <img src="assets/images/logo.png" height="40" alt="University Logo">
+      </div>
+  
+      <h3 class="text-center text-white mb-1">Welcome Back!</h3>
+      <p class="text-center text-muted">Sign in to University Reimbursement Portal</p>
+  
+      <form class="mt-4" [formGroup]="fg" (submit)="submitForm()" autocomplete="off">
+        <div class="mb-3">
+          <label for="username" class="form-label text-white">Username</label>
+          <input type="text" class="form-control rounded-pill" formControlName="userid" placeholder="Enter username">
+        </div>
+  
+        <div class="mb-3">
+          <label for="userpassword" class="form-label text-white">Password</label>
+          <input type="password" class="form-control rounded-pill" formControlName="pwd" placeholder="Enter password">
+        </div>
+  
+        <button type="submit" class="btn btn-primary w-100 rounded-pill">Log In</button>
+      </form>
+  
+      <div class="text-center mt-3">
+        <a routerLink="register" class="text-light small">New here? Register instead</a>
+      </div>
+    </div>
+  </div>
+  

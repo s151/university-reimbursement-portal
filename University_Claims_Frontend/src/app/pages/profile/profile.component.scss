@@ -1,0 +1,44 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .profile-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-card h3 {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .table th {
+    background-color: #f5f7fa;
+    color: #333;
+    vertical-align: middle;
+    font-weight: 600;
+    width: 25%;
+  }
+  
+  .table td {
+    vertical-align: middle;
+    color: #444;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .profile-card {
+      padding: 1.5rem;
+    }
+  
+    .table th,
+    .table td {
+      font-size: 0.95rem;
+    }
+  }
+  

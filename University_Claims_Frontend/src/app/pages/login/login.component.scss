@@ -1,0 +1,68 @@
+// .title{
+//     position: absolute;
+//     bottom:200px;
+//     left:50%;    		
+//     color:black;    		
+//     text-shadow: 1px 1px 4px white;
+// }
+// .title h5{
+// font-size:35px!important;
+// }
+// .background{
+//     background: url('../../../assets/images/bg.jpg');
+//     background-size: cover;
+//     background-position: center;
+// }
+.login-page-container {
+    height: 100vh;
+    width: 100%;
+    background: url('../../../assets/images/bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); // dark overlay
+    z-index: 1;
+  }
+  
+  .login-box {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-box .form-control {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    padding: 0.75rem;
+  }
+  
+  .login-box .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.6rem;
+    font-weight: 500;
+  }
+  
+  .login-box .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-box label {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  

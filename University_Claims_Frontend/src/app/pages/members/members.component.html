@@ -1,0 +1,25 @@
+<h5>All Employee List</h5>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of members$ | async">
+            <td>{{item.id}}</td>
+            <td>{{item.mname}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.isadmin ? 'Admin':'Member'}}</td>
+        </tr>
+    </tbody>
+</table>

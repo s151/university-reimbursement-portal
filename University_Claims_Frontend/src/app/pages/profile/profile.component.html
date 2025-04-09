@@ -1,0 +1,19 @@
+<h4>Member Profile</h4>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <td>{{(user$ | async)?.mname}}</td>
+        <th>Gender</th>
+        <td>{{(user$ | async)?.gender}}</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{(user$ | async)?.address}}</td>
+        <th>Email Id</th>
+        <td>{{(user$ | async)?.email}}</td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td>{{(user$ | async)?.phone}}</td>        
+    </tr>
+</table>

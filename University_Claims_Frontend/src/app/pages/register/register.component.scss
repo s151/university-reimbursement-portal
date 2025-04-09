@@ -1,0 +1,33 @@
+.register-page-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(to right, #1c92d2, #f2fcfe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .register-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-card .form-label {
+    font-weight: 500;
+  }
+  
+  .register-card .form-control {
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+  }
+  
+  .register-card .btn-primary {
+    padding: 0.6rem;
+    font-weight: 500;
+    border-radius: 10px;
+  }
+  

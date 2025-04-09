@@ -1,0 +1,73 @@
+<div class="reimbursement-wrapper">
+    <div class="reimbursement-card">
+      <h3 class="form-title">Submit New Reimbursement</h3>
+  
+      <form [formGroup]="claimForm" (submit)="submitClaim()">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <label>Employee Type<span>*</span></label>
+            <select class="form-control" formControlName="vtype" required>
+              <option value="">Select Employee Type</option>
+              <option>Full-time Employee</option>
+              <option>Part-time Employee</option>
+            </select>
+          </div>
+  
+          <div class="col-md-6">
+            <label>Date of Purchase<span>*</span></label>
+            <input type="text" formControlName="model" placeholder="e.g. 2025-04-08" class="form-control" required>
+          </div>
+  
+          <div class="col-md-6">
+            <label>Reimbursement Amount<span>*</span></label>
+            <input type="number" formControlName="insuranceAmount" class="form-control" required>
+          </div>
+  
+          <div class="col-md-6">
+            <label>Total Claimed Amount<span>*</span></label>
+            <input type="number" formControlName="claimAmount" class="form-control" required>
+          </div>
+  
+          <div class="col-12">
+            <label>Purchase Description<span>*</span></label>
+            <input type="text" formControlName="vno" placeholder="e.g. Office Supplies, Travel" class="form-control" required>
+          </div>
+  
+          <div class="col-md-6">
+            <label>Document Type<span>*</span></label>
+            <input type="text" formControlName="docType1" placeholder="Receipt / Invoice" class="form-control" required>
+          </div>
+  
+          <div class="col-md-6">
+            <label>Receipt Upload<span>*</span></label>
+            <input type="file" (change)="uploadFile($event,1)" class="form-control" required>
+          </div>
+  
+          <div class="col-md-6">
+            <label>Additional Doc Type</label>
+            <input type="text" formControlName="docType2" class="form-control">
+          </div>
+  
+          <div class="col-md-6">
+            <label>Additional Document</label>
+            <input type="file" (change)="uploadFile($event,2)" class="form-control">
+          </div>
+  
+          <div class="col-md-6">
+            <label>Additional Doc Type</label>
+            <input type="text" formControlName="docType3" class="form-control">
+          </div>
+  
+          <div class="col-md-6">
+            <label>Additional Document</label>
+            <input type="file" (change)="uploadFile($event,3)" class="form-control">
+          </div>
+  
+          <div class="col-12 text-center">
+            <button class="btn btn-primary submit-btn mt-3" type="submit">Submit Reimbursement</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

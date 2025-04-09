@@ -1,0 +1,49 @@
+.dashboard-container {
+    padding: 2rem;
+  
+    h3 {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+  
+  .dashboard-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  
+    .card-count {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+  }
+  
+  .card-members {
+    background: linear-gradient(135deg, #28a745, #218838);
+  }
+  
+  .card-claims {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+  }
+  
+  // Optional: Add responsive gutter
+  @media screen and (max-width: 576px) {
+    .dashboard-card {
+      padding: 1.5rem;
+    }
+  }
+  

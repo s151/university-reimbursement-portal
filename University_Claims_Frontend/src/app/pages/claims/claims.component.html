@@ -1,0 +1,38 @@
+<h4>All Reimbursement Records</h4>
+
+<input type="search"
+       placeholder="Search Reimbursements by Employee Name"
+       class="form-control mb-2 float-right"
+       style="width: 400px"
+       (keyup)="filterClaim($event)">
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Reimbursement ID</th>
+      <th>Employee Name</th>
+      <th>Reimbursement Amount</th>
+      <th>Total Claimed Amount</th>
+      <th>Employee Type</th>
+      <th>Purchase Description</th>
+      <th>Submission Date</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of claims$ | async">
+      <td>{{item.id}}</td>
+      <td>{{item.member?.mname}}</td>
+      <td>{{item.insuranceAmount | currency}}</td>
+      <td>{{item.claimAmount | currency}}</td>
+      <td>{{item.vtype}}</td>
+      <td>{{item.vno}}</td>
+      <td>{{item.reqDate | date}}</td>
+      <td>{{item.status}}</td>
+      <td>
+        <a routerLink="/details/{{item.id}}" class="btn btn-primary btn-sm">View</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

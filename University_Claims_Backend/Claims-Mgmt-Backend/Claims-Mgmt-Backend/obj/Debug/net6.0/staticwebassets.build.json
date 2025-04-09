@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "XiUku6ZTra0yb1W+lnDcfWYWMKB2WND7hR3eIP7bdlQ=",
+  "Source": "Claims-Mgmt-Backend",
+  "BasePath": "_content/Claims-Mgmt-Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Claims-Mgmt-Backend\\wwwroot",
+      "Source": "Claims-Mgmt-Backend",
+      "ContentRoot": "C:\\Users\\samar\\Downloads\\Claims-Mgmt-Backend Updated\\Claims-Mgmt-Backend\\Claims-Mgmt-Backend\\wwwroot\\",
+      "BasePath": "_content/Claims-Mgmt-Backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
